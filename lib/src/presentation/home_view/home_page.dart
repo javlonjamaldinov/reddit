@@ -1,8 +1,10 @@
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/widgets.dart';
 import 'package:reddit/src/components/all_buttoms/custom_button_navbar/custom_button_navbar.dart';
 import 'package:reddit/src/components/drawer/drawer.dart';
 import 'package:reddit/src/data/data.dart';
@@ -101,9 +103,9 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Text(userData.username),
                     Text(userData.bio),
-                    Image.network(userData.imageURL),
                     Text(userData.timeStamp.toString()),
                     Text(userData.likes),
+                    Image.network(userData.imageURL),
                   ],
                 ),
               );
